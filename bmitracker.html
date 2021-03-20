@@ -40,7 +40,28 @@
           </ul> -->
         
 
-          <div id="bmitracker" class="col s12">Test 3</div>
+          <div id="bmitracker" class="col s12"><h4>Calculate your BMI (body mass index)</h4></div>
+
+          <div>
+            <p id="intro">Calculate your BMI (body mass index) by using the form below. Enter your weight and height and click the Calculate button to display your BMI result.</p>
+            <form action="none" method="post" name="bmiform">
+                <fieldset>
+                <legend>Height and Weight</legend>
+                    <label for="pounds">Weight (pounds):</label>
+                    <input type="text" name="pounds" id="pounds">
+                    <br>
+                    <label for="inches">Height (inches):</label>
+                    <input type="text" name="inches" id="inches">
+                    <br>
+                    <button type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate your BMI</button>
+                </fieldset>
+                <fieldset>
+                <legend>BMI</legend>
+                    <label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+                    <input type="text" name="bmi" id="bmi" readonly="readonly">
+                </fieldset>
+            </form>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
