@@ -1,0 +1,16 @@
+/* NAV BAR STYLING */
+.nav-wrapper {
+    background-color: #43BCCD;
+}
+
+.nav-content {
+    background: #f86624;
+}
+
+/* START PAGE STYLING */
+.startpage h2 {
+    text-align: center;
+}
+.startpage {
+    background: #EA3546;
+}

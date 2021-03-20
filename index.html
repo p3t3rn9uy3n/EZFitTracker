@@ -40,9 +40,40 @@
           </ul> -->
         
           <div id="home" class="col s12">Test 1</div>
-          <div id="calender" class="col s12">Test 2</div>
-          <div id="bmitracker" class="col s12">Test 3</div>
-          <div id="food" class="col s12">Test 4</div>
+    </div>
+
+    <!-- NEW USERS PAGE FILL OUT INITIAL INFO -->
+    <div class="startpage">
+
+        <h2>Let's Get Started!</h2>
+
+        <!-- NAME INPUT -->
+        <section class="infoform">
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="First Name" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                </form>
+              </div>
+        </section>
+
+        <!-- WEIGHT SELECTOR -->
+        <section class="weightrange">
+            <h4>Weight (lbs)</h4>
+            <form action="#">
+                <p class="range-field">
+                <input type="range" id="test5" min="0" max="500" />
+                </p>
+            </form>
+        </section>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
