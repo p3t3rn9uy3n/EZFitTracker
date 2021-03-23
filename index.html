@@ -87,11 +87,12 @@
 
         <!-- NAME INPUT -->
         <section class="infoform">
+          <h4>Enter First and Last Name</h4>
             <div class="row">
                 <form class="col s12">
                   <div class="row">
                     <div class="input-field col s6">
-                      <input placeholder="First Name" id="first_name" type="text" class="validate">
+                      <input id="first_name" type="text" class="validate">
                       <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
@@ -113,24 +114,29 @@
             </form>
         </section>
 
-        <div class="dateselect">
-            <input type="text" class="datepicker">
-        </div>
-
         <!-- GOAL SELECTOR -->
         <!-- Dropdown Trigger -->
+        <h4>Select a Goal</h4>
         <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
 
         <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
+          <li><a href="#!">Shredding fat</a></li>
+          <li><a href="#!">Building muscle</a></li>
           <li class="divider" tabindex="-1"></li>
-          <li><a href="#!">three</a></li>
+          <li><a href="#!">Toning</a></li>
           <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
           <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
         </ul>     
+
+        <!-- GOAL DATE -->
+        <h4>Goal Date</h4>
+          <input type="text" class="datepicker">
     </div>
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="jquery-3.5.1.min.js"></script>
