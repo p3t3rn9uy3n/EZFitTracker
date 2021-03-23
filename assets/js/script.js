@@ -14,5 +14,3 @@ M.Datepicker.init(calender,{
 $('.dropdown-trigger').dropdown();
 
 M.AutoInit();
-
-asdoijaosidjaiosdj
