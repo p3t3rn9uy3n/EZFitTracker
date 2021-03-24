@@ -43,6 +43,9 @@
             <form action="none" method="post" name="bmiform">
                 <fieldset>
                 <legend>Height and Weight</legend>
+                    <label for="pounds">Goal Weight (pounds):</label>
+                    <input type="text" name="pounds" id="pounds">
+                    <br>
                     <label for="pounds">Weight (pounds):</label>
                     <input type="text" name="pounds" id="pounds">
                     <br>
@@ -60,6 +63,20 @@
         </div>
 
         <!-- LBS AWAY FROM GOAL -->
+        <div>
+          <h4>POUNDS AWAY FROM GOAL</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="pounddiffer" type="text" class="validate">
+                  <label for="pound_differ">Place Hold</label>
+                  <!-- MOVE SUBMIT BUTTON -->
+                  <button>Submit</button>
+                </div>
+            </form>
+          </div>   
+        </div>
 
         <!-- FOOD -->
         <div>
@@ -74,8 +91,7 @@
                   <button>Submit</button>
                 </div>
             </form>
-          </div>
-                
+          </div>   
         </div>
 
 
