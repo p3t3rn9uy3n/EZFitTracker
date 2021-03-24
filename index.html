@@ -28,111 +28,101 @@
               <ul class="tabs tabs-transparent">
                   <!-- NAV BUTTON LINKS -->
                 <li class="tab"><a class="active" href="index.html">Home</a></li>
-                <li class="tab"><a class="active" href="calender.html">Calender</a></li>
                 <li class="tab"><a class="active" href="bmitracker.html">BMI Tracker</a></li>
+                <li class="tab"><a class="active" href="calender.html">Calender</a></li>
                 <li class="tab"><a class="active" href="food.html">Food</a></li>
               </ul>
             </div>
           </nav>
-        
-          <!-- <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul> -->
-        <div class="homepage">
-          <div id="home" class="col s12"><h4>Summary</h4></div>
-            <div class="card">
-                <div class="card-content">
-                <p>You have lost X weight since XX/XX/XXXX.</p>
-                </div>
 
-                <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                    <li class="tab"><a class="active" href="#workout">Workout Plans</a></li>
-                    <li class="tab"><a class="active" href="#currentweight">Current Weight</a></li>
-                    <li class="tab"><a class="active" href="#todaymeal">Today's Meals</a></li>
-                </ul>
-                </div>
-                <div class="card-contentbot lighten-4">
-                <div id="workout">
-                    <h5>Workout Plans</h5>
-                    <p>100 push ups</p>
-                    <p>100 sit ups</p>
-                    <p>100 squats</p>
-                    <p>6.2 mile run</p>
-                </div>
+          <!-- BMI CALCULATOR -->
+          <div id="bmitracker" class="col s12"><h4>Calculate your BMI (body mass index)</h4></div>
+          <!-- MAKE A GOAL WEIGHT -->
+          <div>
+            <p id="intro">Calculate your BMI (body mass index) by using the form below. Enter your weight and height and click the Calculate button to display your BMI result.</p>
+            <form action="none" method="post" name="bmiform">
+                <fieldset>
+                <legend>Height and Weight</legend>
+                    <label for="pounds">Weight (pounds):</label>
+                    <input type="text" name="pounds" id="pounds">
+                    <br>
+                    <label for="inches">Height (inches):</label>
+                    <input type="text" name="inches" id="inches">
+                    <br>
+                    <button type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate your BMI</button>
+                </fieldset>
+                <fieldset>
+                <legend>BMI</legend>
+                    <label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+                    <input type="text" name="bmi" id="bmi" readonly="readonly">
+                </fieldset>
+            </form>
+        </div>
 
-                <div id="currentweight">
-                    <h5>Current Weight</h5>
-                    <p>200lbs</p>
-                </div>
+        <!-- LBS AWAY FROM GOAL -->
 
-                <div id="todaymeal">
-                    <h5>Today's Meals</h5>
-                    <p>Breakfast: Bacon</p>
-                    <p>Lunch: Pizza</p>
-                    <p>Dinner: Steak</p>
+        <!-- FOOD -->
+        <div>
+          <h4>FOOD</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="enterupc" type="text" class="validate">
+                  <label for="enter_upc">Enter UPC</label>
+                  <!-- MOVE SUBMIT BUTTON -->
+                  <button>Submit</button>
                 </div>
+            </form>
+          </div>
+                
+        </div>
+
+
+        <!-- CALENDER -->
+        <div>
+          <h4>CALENDER</h4>
+          <div class="row">
+            <div class="col s3">
+              <div class="card-panel teal">
+                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                </span>
+              </div>
             </div>
-          
+
+            <div class="col s3">
+              <div class="card-panel teal">
+                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                </span>
+              </div>
+            </div>
+
+            <div class="col s3">
+              <div class="card-panel teal">
+                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                </span>
+              </div>
+            </div>
+
+            <div class="col s3">
+              <div class="card-panel teal">
+                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                </span>
+              </div>
+            </div>
+
+        </div>
+
+
         </div>        
 
     </div>
 
-    <!-- NEW USERS PAGE FILL OUT INITIAL INFO -->
-    <div class="startpage">
-          
-        <h2>Let's Get Started!</h2>
 
-        <!-- NAME INPUT -->
-        <section class="infoform">
-          <h4>Enter First and Last Name</h4>
-            <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input id="first_name" type="text" class="validate">
-                      <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                      <input id="last_name" type="text" class="validate">
-                      <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-                </form>
-              </div>
-        </section>
-
-        <!-- WEIGHT SELECTOR -->
-        <section class="weightrange">
-            <h4>Weight (lbs)</h4>
-            <form action="#">
-                <p class="range-field">
-                <input type="range" id="test5" min="0" max="500" />
-                </p>
-            </form>
-        </section>
-
-        <!-- GOAL SELECTOR -->
-        <!-- Dropdown Trigger -->
-        <h4>Select a Goal</h4>
-        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-        <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!">Shredding fat</a></li>
-          <li><a href="#!">Building muscle</a></li>
-          <li class="divider" tabindex="-1"></li>
-          <li><a href="#!">Toning</a></li>
-          <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-        </ul>     
-
-        <!-- GOAL DATE -->
-        <h4>Goal Date</h4>
-          <input type="text" class="datepicker">
-    </div>
 
 
 
