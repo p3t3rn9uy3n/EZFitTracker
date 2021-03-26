@@ -1,7 +1,13 @@
 /* BACKGROUND */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 	background-color: #662E9B;
 	color: white;
+	font-family: 'Poppins', sans-serif;
 }
 
 h4 {
@@ -14,7 +20,10 @@ label {
 
 input {
 	color: white;
-}
+}	
+
+
+
 /* BUTTONS */
 .btn {
 	background-color: #F9C80E;
@@ -46,6 +55,12 @@ input {
 }
 
 /* NAV BAR STYLING */
+nav {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	opacity: 95%;
+}
 .nav-wrapper {
     background-color: #43BCCD;
 }
@@ -57,7 +72,7 @@ input {
 /* HOME PAGE */
 .homepic {
 	text-align: center;
-	margin-top: 10%;
+	margin-top: 15%;
 	margin-bottom: 10%;
 }
 
@@ -76,6 +91,7 @@ input {
 .bmicalculator {
 	text-align: center;
 }
+
 fieldset {
 	width: 300px;
 	margin: auto;
