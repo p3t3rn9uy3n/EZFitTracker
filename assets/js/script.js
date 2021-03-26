@@ -3,18 +3,7 @@ function calcBMI() {
   var weight = document.bmiform.pounds.value, height = document.bmiform.inches.value;
   document.bmiform.bmi.value = parseInt((weight * 703) / (height * height));
 } 
-
-// DATE PICKER
-const calender = document.querySelector('.datepicker');
-M.Datepicker.init(calender,{
-  Format:'dd-mmmm-yyyy'
-});
       
-
-$('.dropdown-trigger').dropdown();
-
-M.AutoInit();
-
 var foodItem
 var foodImage
 var foodName
@@ -38,7 +27,7 @@ function pullFoodInfo(event) {
 
   var appID = 'e5a14e07'
   var apiKey = '6caa294ca6183b8a7cad61a11140987b'
-  var upcURL = 'https://cors.bridged.cc/https://api.edamam.com/api/food-database/v2/parser?upc=' + upcValue + '&app_id=' + appID + '&app_key=' + apiKey
+  var upcURL = 'https://api.edamam.com/api/food-database/v2/parser?upc=' + upcValue + '&app_id=' + appID + '&app_key=' + apiKey
   
   fetch(upcURL)
   .then(function(response){
@@ -48,7 +37,7 @@ function pullFoodInfo(event) {
   .then(function(data){
     console.log(data)
     foodItem = data.hints
-
+    
   foodImage = foodItem[0].food.image
   foodName = foodItem[0].food.label
   foodCal = foodItem[0].food.nutrients.ENERC_KCAL
@@ -64,7 +53,6 @@ function pullFoodInfo(event) {
   var foodItemImg = document.createElement('img');
   foodDiv.appendChild(foodItemImg);
   foodItemImg.setAttribute('src', foodImage)
-
 })
 }
 

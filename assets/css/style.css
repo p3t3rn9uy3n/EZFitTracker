@@ -1,4 +1,42 @@
-/* INDEX.HTML */
+/* BACKGROUND */
+body {
+	background-color: #662E9B;
+	color: white;
+}
+
+h4 {
+	text-align: center;
+}
+/* BUTTONS */
+.btn {
+	background-color: #F9C80E;
+	color: #662E9B;
+	position: relative;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn:after {
+	content: "";
+	background: white;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px!important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+.btn:active:after {
+	opacity: 1;
+	transition: 0s;
+}
+
 /* NAV BAR STYLING */
 .nav-wrapper {
     background-color: #43BCCD;
@@ -8,49 +46,29 @@
     background: #f86624;
 }
 
-/* START PAGE STYLING */
-.startpage h2 {
-    text-align: center;
-}
-.startpage {
-    background: #EA3546;
+/* POUNDS AWAY FROM GOAL */
+.goalweight {
+	text-align: center;
+	margin: auto;
 }
 
-/* HOME PAGE STYLING */
-.card-content {
-    background-color: #F9C80E;
+.col {
+	width: 20%;
+	margin: auto;
 }
 
-.tabs {
-    background: #662E9B;
-}
-
-.card-contentbot {
-    background: #EA3546;
-}
-
-/* BMITRACKER.HTML */
 /* BMI CALC STYLING */
+#bmitracker {
+	margin-top: 20%;
+}
+.bmicalculator {
+	text-align: center;
+}
 fieldset {
 	width: 300px;
-	margin: 25px 0 0 50px;
-	border: 1px solid #999999;
+	margin: auto;
+	border: 5px solid #43BCCD;
 	box-shadow: 1px 1px #cccccc;
-	padding: 10px;
-}
-
-label {
-	float: left;
-	width: 140px;
-	display: block;
-	clear: left;
-	text-align: right;
-	padding-right: 10px;
-	margin-top: 10px;
-}
-
-button {
-	margin-left: 150px;
 }
 
 input {
@@ -70,8 +88,13 @@ input {
 
 #intro {
 	width: 300px;
-	margin: 25px 0 0 50px;
+	margin: auto;
 	padding: 10px;
-	border: 1px solid #999999;
+	border: 5px solid #43BCCD;
 	box-shadow: 1px 1px #cccccc;
+}
+
+/* CALENDAR */
+.card-panel {
+	background-color: #43BCCD;
 }
