@@ -35,8 +35,13 @@
             </div>
           </nav>
 
+          <!-- HOME PAGE PICTURE -->
+          <div class="homepic">
+            <img src="assets/images/beerbelly.jfif">
+          </div>
+
           <!-- BMI CALCULATOR -->
-          <div class="bmitracker"><h4>Calculate your BMI (body mass index)</h4></div>
+          <div class="bmitracker"><h4 id="bmitracker">Calculate your BMI (body mass index)</h4></div>
           <!-- MAKE A GOAL WEIGHT -->
           <div class="bmicalculator">
             <p id="intro">Calculate your BMI (body mass index) by using the form below. Enter your weight and height and click the Calculate button to display your BMI result.</p>
@@ -46,7 +51,7 @@
                     <label for="pounds">Goal Weight (pounds):</label>
                     <input type="text" name="pounds" id="pounds">
                     <br>
-                    <label for="pounds">Weight (pounds):</label>
+                    <label for="pounds">Current Weight (pounds):</label>
                     <input type="text" name="pounds" id="pounds">
                     <br>
                     <label for="inches">Height (inches):</label>
@@ -70,7 +75,7 @@
               <div class="">
                 <div class="input-field">
                   <input id="pounddiffer" type="text" class="validate">
-                  <label for="pound_differ">Place Hold</label>
+                  <label for="pound_differ">lbs</label>
                   <!-- MOVE SUBMIT BUTTON -->
                   <button class="btn">Submit</button>
                 </div>
@@ -80,7 +85,7 @@
 
         <!-- FOOD -->
         <div>
-          <h4>FOOD</h4>
+          <h4 id="food">FOOD</h4>
           <div id="foodDiv">
             <form class="col">
               <div class="">
@@ -97,24 +102,24 @@
 
         <!-- CALENDER -->
         <div>
-          <h4>CALENDAR</h4>
-          <div class="row">
-            <div class="col s3">
+          <h4 id="calendar">CALENDAR</h4>
+          <div class="">
+            <div class="col">
               <div id="Day0" class="card-panel">
               </div>
             </div>
 
-            <div class="col s3">
+            <div class="col">
               <div id="Day1" class="card-panel">
               </div>
             </div>
 
-            <div class="col s3">
+            <div class="col">
               <div id="Day2" class="card-panel">
               </div>
             </div>
 
-            <div class="col s3">
+            <div class="col">
               <div id="Day3" class="card-panel">
               </div>
             </div>
