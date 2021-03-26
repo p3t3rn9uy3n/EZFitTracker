@@ -37,7 +37,5 @@ fetch(upcURL)
     foodImage = foodItem[0].food.image
     foodName = foodItem[0].food.label
     foodCal = foodItem[0].food.nutrients.ENERC_KCAL
-
-
 })
 
