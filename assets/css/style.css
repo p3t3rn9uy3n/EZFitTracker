@@ -7,6 +7,14 @@ body {
 h4 {
 	text-align: center;
 }
+
+label {
+	color: white;
+}
+
+input {
+	color: white;
+}
 /* BUTTONS */
 .btn {
 	background-color: #F9C80E;
@@ -46,6 +54,13 @@ h4 {
     background: #f86624;
 }
 
+/* HOME PAGE */
+.homepic {
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
 /* POUNDS AWAY FROM GOAL */
 .goalweight {
 	text-align: center;
@@ -58,9 +73,6 @@ h4 {
 }
 
 /* BMI CALC STYLING */
-#bmitracker {
-	margin-top: 20%;
-}
 .bmicalculator {
 	text-align: center;
 }
@@ -97,4 +109,5 @@ input {
 /* CALENDAR */
 .card-panel {
 	background-color: #43BCCD;
+	width: 300px;
 }
