@@ -38,8 +38,6 @@ var upcURL
 
 function pullFoodInfo(event) {
   event.preventDefault();
-  console.log(event);
-  console.log(upcInput.value)
   upcValue = upcInput.value;
 
   var appID = 'e5a14e07'
@@ -48,11 +46,9 @@ function pullFoodInfo(event) {
   
   fetch(upcURL)
   .then(function(response){
-    console.log(response)
     return response.json()
   })
   .then(function(data){
-    console.log(data)
     foodItem = data.hints
     
   foodImage = foodItem[0].food.image
@@ -85,11 +81,9 @@ function testWeather() {
   fetch(openWeatherAPI)
     //fetch weather api and confirm that response is good
     .then(function (response) {
-      console.log("success")
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
       var longlatData = data.coord;
       return longlatData;
     })
