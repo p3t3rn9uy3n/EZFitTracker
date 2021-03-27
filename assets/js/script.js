@@ -1,12 +1,20 @@
 // BMI CALCULATOR
-var goalWeightEl = document.querySelector('goalweight')
+var goalWeightEl = document.querySelector('goalWeight')
 var currentWeightEl = document.querySelector('currentweight')
-var weightDifferEl = document.querySelector('weightdiffer')
+var weightDifferEl = document.querySelector('weightDiff')
+
+var weight
+var height
+var goalWeight
 
 
 function calcBMI() {
-  var weight = document.bmiform.pounds.value, height = document.bmiform.inches.value;
+  weight = document.bmiform.pounds.value;
+  height = document.bmiform.inches.value;
+  goalWeight = document.bmiform.goalWeight.value;
+
   document.bmiform.bmi.value = parseInt((weight * 703) / (height * height));
+  document.bmiform.weightDiff.value = parseInt(weight-goalWeight)
 } 
 
 
