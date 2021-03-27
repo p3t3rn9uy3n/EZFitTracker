@@ -22,6 +22,16 @@ input {
 	color: white;
 }	
 
+#bmi {
+	color: white;
+}
+
+#weightDiff {
+	color: white;
+}
+
+
+
 
 
 /* BUTTONS */
@@ -102,16 +112,12 @@ fieldset {
 input {
 	margin-top: 10px;
 	display: block;
-	text-align: right;
+	text-align: center;
 	width: 128px;
 }
 
 #bmi_label {
 	width: 200px;
-}
-
-#bmi {
-	width: 66px;
 }
 
 #intro {
