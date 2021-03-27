@@ -53,25 +53,26 @@
             <form action="none" method="post" name="bmiform">
                 <fieldset>
                 <legend>Height and Weight</legend>
-                    <label for="pounds">Goal Weight (pounds):</label>
-                    <input class="goalweight" type="text" name="pounds" id="pounds">
+                    <label for="goalWeight">Goal Weight (pounds):</label>
+                    <input class="goalWeight" type="text" name="goalWeight" id="goalWeight">
                     <br>
                     <label for="pounds">Current Weight (pounds):</label>
                     <input class="currentweight" type="text" name="pounds" id="pounds">
                     <br>
                     <label for="inches">Height (inches):</label>
                     <input type="text" name="inches" id="inches">
-                    <br>
-                    <label for="pounds">Pounds Away From Goal:</label>
-                    <input class="goalweight" type="text" name="pounds" id="pounds">
-                    <br>
-                    <button class="btn" type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate your BMI</button>
+                    <button class="btn" type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate</button>
                 </fieldset>
                 <fieldset>
                 <legend>BMI</legend>
                     <label for="bmi" id="bmi_label">Your calculated BMI is:</label>
                     <input type="text" name="bmi" id="bmi" readonly="readonly">
                 </fieldset>
+                <fieldset>
+                  <legend>Away from Goal</legend>
+                      <label for="weightDiff" id="weightDiff_label">Pounds Away From Goal:</label>
+                      <input type="text" name="weightDiff" id="weightDiff" readonly="readonly">
+                  </fieldset>
             </form>
         </div>
 
