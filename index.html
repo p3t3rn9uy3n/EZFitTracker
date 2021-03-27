@@ -31,8 +31,8 @@
                   <!-- NAV BUTTON LINKS -->
                 <li class="tab"><a class="active" href="#top">Home</a></li>
                 <li class="tab"><a class="active" href="#bmitracker">BMI Tracker</a></li>
-                <li class="tab"><a class="active" href="#calendar">Calendar</a></li>
                 <li class="tab"><a class="active" href="#food">Food</a></li>
+                <li class="tab"><a class="active" href="#calendar">Calendar</a></li>
               </ul>
             </div>
         </nav>
@@ -53,14 +53,17 @@
             <form action="none" method="post" name="bmiform">
                 <fieldset>
                 <legend>Height and Weight</legend>
-                    <!-- <label for="pounds">Goal Weight (pounds):</label>
+                    <label for="pounds">Goal Weight (pounds):</label>
                     <input class="goalweight" type="text" name="pounds" id="pounds">
-                    <br> -->
+                    <br>
                     <label for="pounds">Current Weight (pounds):</label>
                     <input class="currentweight" type="text" name="pounds" id="pounds">
                     <br>
                     <label for="inches">Height (inches):</label>
                     <input type="text" name="inches" id="inches">
+                    <br>
+                    <label for="pounds">Pounds Away From Goal:</label>
+                    <input class="goalweight" type="text" name="pounds" id="pounds">
                     <br>
                     <button class="btn" type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate your BMI</button>
                 </fieldset>
@@ -70,22 +73,6 @@
                     <input type="text" name="bmi" id="bmi" readonly="readonly">
                 </fieldset>
             </form>
-        </div>
-
-        <!-- LBS AWAY FROM GOAL -->
-        <div class="goalweight">
-          <h4>POUNDS AWAY FROM GOAL</h4>
-          <div class="">
-            <form class="col">
-              <div class="">
-                <div class="input-field">
-                  <input class="weightdiffer" id="pounddiffer" type="text" class="validate">
-                  <label for="pound_differ">lbs</label>
-                  <!-- MOVE SUBMIT BUTTON -->
-                  <button class="btn">Submit</button>
-                </div>
-            </form>
-          </div>   
         </div>
 
         <!-- FOOD -->
