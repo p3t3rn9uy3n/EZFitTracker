@@ -141,3 +141,7 @@ input {
 	background-color: #43BCCD;
 	width: 300px;
 }
+
+#foodDiv {
+	text-align: center;
+}
