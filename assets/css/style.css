@@ -1,5 +1,76 @@
-/* INDEX.HTML */
+/* BACKGROUND */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: #662E9B;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+	text-align: center;
+}
+
+label {
+	color: white;
+}
+
+input {
+	color: white;
+}	
+
+#bmi {
+	color: white;
+}
+
+#weightDiff {
+	color: white;
+}
+
+
+
+
+
+/* BUTTONS */
+.btn {
+	background-color: #F9C80E;
+	color: #662E9B;
+	position: relative;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn:after {
+	content: "";
+	background: white;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px!important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+.btn:active:after {
+	opacity: 1;
+	transition: 0s;
+}
+
 /* NAV BAR STYLING */
+nav {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	opacity: 95%;
+}
 .nav-wrapper {
     background-color: #43BCCD;
 }
@@ -8,55 +79,48 @@
     background: #f86624;
 }
 
-/* START PAGE STYLING */
-.startpage h2 {
-    text-align: center;
-}
-.startpage {
-    background: #EA3546;
-}
-
-/* HOME PAGE STYLING */
-.card-content {
-    background-color: #F9C80E;
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
 }
 
-.tabs {
-    background: #662E9B;
+/* HOME PAGE */
+.homepic {
+	text-align: center;
+	margin-top: 15%;
+	margin-bottom: 10%;
 }
 
-.card-contentbot {
-    background: #EA3546;
+/* POUNDS AWAY FROM GOAL */
+.goalweight {
+	text-align: center;
+	margin: auto;
 }
 
-/* BMITRACKER.HTML */
+.col {
+	width: 20%;
+	margin: auto;
+}
+
 /* BMI CALC STYLING */
+.bmicalculator {
+	text-align: center;
+	margin-bottom: 120px;
+}
+
 fieldset {
 	width: 300px;
-	margin: 25px 0 0 50px;
-	border: 1px solid #999999;
+	margin: auto;
+	border: 5px solid #43BCCD;
 	box-shadow: 1px 1px #cccccc;
-	padding: 10px;
-}
-
-label {
-	float: left;
-	width: 140px;
-	display: block;
-	clear: left;
-	text-align: right;
-	padding-right: 10px;
-	margin-top: 10px;
-}
-
-button {
-	margin-left: 150px;
 }
 
 input {
 	margin-top: 10px;
 	display: block;
-	text-align: right;
+	text-align: center;
 	width: 128px;
 }
 
@@ -64,14 +128,20 @@ input {
 	width: 200px;
 }
 
-#bmi {
-	width: 66px;
-}
-
 #intro {
 	width: 300px;
-	margin: 25px 0 0 50px;
+	margin: auto;
 	padding: 10px;
-	border: 1px solid #999999;
+	border: 5px solid #43BCCD;
 	box-shadow: 1px 1px #cccccc;
+}
+
+/* CALENDAR */
+.card-panel {
+	background-color: #43BCCD;
+	width: 300px;
+}
+
+#foodDiv {
+	text-align: center;
 }

@@ -1,45 +1,75 @@
 // BMI CALCULATOR
+var goalWeightEl = document.querySelector('goalWeight')
+var currentWeightEl = document.querySelector('currentweight')
+var weightDifferEl = document.querySelector('weightDiff')
+
+var weight
+var height
+var goalWeight
+
+
 function calcBMI() {
-  var weight = document.bmiform.pounds.value, height = document.bmiform.inches.value;
+  weight = document.bmiform.pounds.value;
+  height = document.bmiform.inches.value;
+  goalWeight = document.bmiform.goalWeight.value;
+
   document.bmiform.bmi.value = parseInt((weight * 703) / (height * height));
-}
-
-// DATE PICKER
-const calender = document.querySelector('.datepicker');
-M.Datepicker.init(calender, {
-  Format: 'dd-mmmm-yyyy'
-});
+  document.bmiform.weightDiff.value = parseInt(weight-goalWeight)
+} 
 
 
-$('.dropdown-trigger').dropdown();
 
-M.AutoInit();
+// 
+      
 var foodItem
 var foodImage
 var foodName
 var foodCal
-var upcInput = '051000012616'
+var upcValue
+var upcInput = document.getElementById('enterUPC')
+var foodDiv = document.getElementById('foodDiv')
+var upcButton = document.getElementById('upcButton')
+var foodItemDiv = document.getElementById('foodItemData')
 
-var appID = 'e5a14e07'
-var apiKey = '6caa294ca6183b8a7cad61a11140987b'
-var upcURL = 'https://api.edamam.com/api/food-database/v2/parser?upc=' + upcInput + '&app_id=' + appID + '&app_key=' + apiKey
+var appID
+var apiKey
+var upcURL
 
 
-fetch(upcURL)
-  .then(function (response) {
-    console.log(response)
+function pullFoodInfo(event) {
+  event.preventDefault();
+  upcValue = upcInput.value;
+
+  var appID = 'e5a14e07'
+  var apiKey = '6caa294ca6183b8a7cad61a11140987b'
+  var upcURL = 'https://api.edamam.com/api/food-database/v2/parser?upc=' + upcValue + '&app_id=' + appID + '&app_key=' + apiKey
+  
+  fetch(upcURL)
+  .then(function(response){
     return response.json()
   })
-  .then(function (data) {
-    console.log(data)
+  .then(function(data){
     foodItem = data.hints
+    
+  foodImage = foodItem[0].food.image
+  foodName = foodItem[0].food.label
+  foodCal = foodItem[0].food.nutrients.ENERC_KCAL
 
-    foodImage = foodItem[0].food.image
-    foodName = foodItem[0].food.label
-    foodCal = foodItem[0].food.nutrients.ENERC_KCAL
+  var foodItemHeader = document.createElement('h5');
+  foodDiv.appendChild(foodItemHeader);
+  foodItemHeader.textContent = foodName;
 
+  var foodItemCal = document.createElement('h5');
+  foodDiv.appendChild(foodItemCal);
+  foodItemCal.textContent = foodCal + ' Calories';
 
-  })
+  var foodItemImg = document.createElement('img');
+  foodDiv.appendChild(foodItemImg);
+  foodItemImg.setAttribute('src', foodImage)
+})
+}
+
+upcButton.addEventListener('click', pullFoodInfo)
 
 //Calender and work-out suggestions.
 var workRain = ["some Bench press * 10", "a Treadmill for 30 minutes", " some Squats * 10"];
@@ -47,40 +77,30 @@ var workClear = ["a 2 mile walk", "a Jog around neighborhood", "go and walk your
 var workOther = ["100 pushups", "10 pull-ups", "planks for 5 minutes total"]
 var currentCity = "Dallas";
 var openWeatherAPI = "https://api.openweathermap.org/data/2.5/weather?q=Dallas&appid=6dc3e95177ba3d57d7f0c5e07d775d52"
-
 function testWeather() {
-
   fetch(openWeatherAPI)
     //fetch weather api and confirm that response is good
     .then(function (response) {
-      console.log("success")
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
       var longlatData = data.coord;
       return longlatData;
     })
     .then(function (coordinates) {
       var oneClickUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + coordinates.lat + "&lon=" + coordinates.lon + "&exclude=minutely,hourly&appid=6dc3e95177ba3d57d7f0c5e07d775d52";
-
       fetch(oneClickUrl)
-
         .then(function (response2) {
-
           return response2.json();
         })
         .then(function (data2) {
           var myWorkout;
                     // var todayDateEl;
-
-
           for (var i = 0; i < 4; i++) {
             var weatherCardEl = document.querySelector("#Day" + i)
             var dailyWeather = data2.daily[i].weather[0].main
             var dailyDtObj = new Date(data2.daily[i].dt * 1000);
             var dailyDate = dailyDtObj.getMonth() + 1 + "/" + dailyDtObj.getDate() + "/" + dailyDtObj.getFullYear();
-
             if (dailyWeather == "Rain") {
               weatherCardEl.app
               myWorkout = workRain[Math.floor(Math.random() * workRain.length)];
@@ -101,11 +121,6 @@ function testWeather() {
           }
           // todayDateEl.innerHTML = new Date(data2.daily[0].dt * 1000);
         })
-
-
     })
-
-
 }
-
 testWeather();
